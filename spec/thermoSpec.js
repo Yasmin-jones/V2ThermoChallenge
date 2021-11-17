@@ -13,13 +13,20 @@ describe("Thermostat", function() {
   });
 
   it('Temp can increase', () => {
-    expect(thermostat.upTemp(2)).toEqual(22); 
+    expect(thermostat.upTemp()).toEqual(21); 
 
   }); 
 
   it('Temp can decrease', () => {
-    expect(thermostat.downTemp(2)).toEqual(18); 
-
+    thermostat.downTemp();
+    expect(thermostat.currentTemp()).toEqual(19); 
   }); 
+
+  it('Has a minimum temp of 10', () => {
+    for (let i = 0; i < 11; i++) {
+      thermostat.downTemp();
+    }
+    expect(thermostat.currentTemp()).toEqual(10);
+  });
 
 });
