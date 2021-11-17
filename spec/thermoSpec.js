@@ -12,4 +12,9 @@ describe("Thermostat", function() {
     expect(thermostat.startTemp).toEqual(20);
   });
 
+  it('Temp can increase', () => {
+    expect(thermostat.increasingTemp(2)).toEqual(22); 
+
+  }); 
+
 });

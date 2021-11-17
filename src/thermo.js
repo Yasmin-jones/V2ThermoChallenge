@@ -10,4 +10,10 @@ class Thermostat{
     return this.startTemp;
   }
 
+  increasingTemp(number) {
+    // this.temperature += 1 
+  return this.startTemp += number; 
+
+  }
+
 };
