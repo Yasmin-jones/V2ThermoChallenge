@@ -13,7 +13,12 @@ describe("Thermostat", function() {
   });
 
   it('Temp can increase', () => {
-    expect(thermostat.increasingTemp(2)).toEqual(22); 
+    expect(thermostat.upTemp(2)).toEqual(22); 
+
+  }); 
+
+  it('Temp can decrease', () => {
+    expect(thermostat.downTemp(2)).toEqual(18); 
 
   }); 
 

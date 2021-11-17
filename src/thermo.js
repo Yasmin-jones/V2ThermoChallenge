@@ -10,10 +10,14 @@ class Thermostat{
     return this.startTemp;
   }
 
-  increasingTemp(number) {
+  upTemp(number) {
     // this.temperature += 1 
   return this.startTemp += number; 
 
+  }
+
+  downTemp(number) {
+    return this.startTemp -= number;
   }
 
 };
