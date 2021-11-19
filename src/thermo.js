@@ -5,6 +5,7 @@ class Thermostat{
   constructor() {
     this.MIN_TEMP = 10;
     this.startTemp = 20;
+    this.powerSavingMode = true; 
     
   }
 
@@ -28,7 +29,19 @@ class Thermostat{
     }
     this.startTemp -= 1;
   }
+
+  isPowerSavingModeOn() {
+    return this.powerSavingMode === true;
+  }
+
+  turnOffPSM() {
+    return this.powerSavingModeOn = false;
+  }
   
+  turnOnPSM() {
+    return this.powerSavingModeOn = true; 
+
+  }
 
  
 
